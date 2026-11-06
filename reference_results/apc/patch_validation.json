@@ -1,0 +1,221 @@
+{
+  "repository": "https://github.com/xmuruaga/bounded-agents",
+  "base_commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+  "python": "3.12.11",
+  "patched_clone": "<workspace>\\alternatives\\bounded_agents_patch_validation",
+  "patch_file": "<workspace>\\patches\\apc_depth_identity_fix.patch",
+  "patch_sha256": "9c5e8a99d4702dcd3f8781c0f1cef70f65d184a388856c690a4cea168a23a1fa",
+  "changed_source_files": [
+    "apc/core.py",
+    "apc/pdp.py"
+  ],
+  "baseline_source_sha256": {
+    "apc/core.py": "1fb08c22703280723a865fd545595d3562e536085626c005f8dd2748fe15a40b",
+    "apc/pdp.py": "6a89cd90c4cc082e3cefe0387d1d3381b96bce2e5ef40f647479a4e05b512333"
+  },
+  "patched_source_sha256": {
+    "apc/core.py": "a5da48d483797fbf0786e5ced4b4f35534e3a9ea6f65a86430670214944062b2",
+    "apc/pdp.py": "02bb6bc60ec54531eac187d5a1f76af945396c2f9a8f9e76d5a0b707639ca93b"
+  },
+  "baseline": {
+    "issuance": [
+      {
+        "cap": 0,
+        "child_issued": true,
+        "child_depth": 1,
+        "signature_valid": true
+      },
+      {
+        "cap": 2,
+        "child_issued": true,
+        "child_depth": 3,
+        "signature_valid": true
+      }
+    ],
+    "admission": [
+      {
+        "signed_cap": 2,
+        "actual_depth": 2,
+        "initial_tracker_depth": 0,
+        "admitted": true,
+        "denial_reasons": [],
+        "signature_valid": true,
+        "budget_condition": true,
+        "identity_condition": true,
+        "tracker_depth": 0
+      },
+      {
+        "signed_cap": 2,
+        "actual_depth": 2,
+        "initial_tracker_depth": 2,
+        "admitted": true,
+        "denial_reasons": [],
+        "signature_valid": true,
+        "budget_condition": true,
+        "identity_condition": true,
+        "tracker_depth": 2
+      },
+      {
+        "signed_cap": 2,
+        "actual_depth": 3,
+        "initial_tracker_depth": 0,
+        "admitted": true,
+        "denial_reasons": [],
+        "signature_valid": true,
+        "budget_condition": true,
+        "identity_condition": true,
+        "tracker_depth": 0
+      },
+      {
+        "signed_cap": 2,
+        "actual_depth": 3,
+        "initial_tracker_depth": 2,
+        "admitted": true,
+        "denial_reasons": [],
+        "signature_valid": true,
+        "budget_condition": true,
+        "identity_condition": true,
+        "tracker_depth": 2
+      }
+    ],
+    "tree": {
+      "width": 3,
+      "depth": 3,
+      "grants": 40,
+      "unique_ids": 4,
+      "all_signatures_valid": true,
+      "baseline_admitted": 40,
+      "denied_after_one_leaf_revoked": 27,
+      "target_leaf_denied": true,
+      "off_target_denials": 26,
+      "same_child_principal_label_and_scope": true
+    }
+  },
+  "patched": {
+    "issuance": [
+      {
+        "cap": 0,
+        "child_issued": false,
+        "error": "delegation_depth: 1 > 0 (signed envelope)"
+      },
+      {
+        "cap": 2,
+        "child_issued": false,
+        "error": "delegation_depth: 3 > 2 (signed envelope)"
+      }
+    ],
+    "admission": [
+      {
+        "signed_cap": 2,
+        "actual_depth": 2,
+        "initial_tracker_depth": 0,
+        "admitted": true,
+        "denial_reasons": [],
+        "signature_valid": true,
+        "budget_condition": true,
+        "identity_condition": true,
+        "tracker_depth": 0
+      },
+      {
+        "signed_cap": 2,
+        "actual_depth": 2,
+        "initial_tracker_depth": 2,
+        "admitted": true,
+        "denial_reasons": [],
+        "signature_valid": true,
+        "budget_condition": true,
+        "identity_condition": true,
+        "tracker_depth": 2
+      },
+      {
+        "signed_cap": 2,
+        "actual_depth": 3,
+        "initial_tracker_depth": 0,
+        "admitted": false,
+        "denial_reasons": [
+          "delegation_depth: 3 > 2 (signed envelope)"
+        ],
+        "signature_valid": true,
+        "budget_condition": false,
+        "identity_condition": true,
+        "tracker_depth": 0
+      },
+      {
+        "signed_cap": 2,
+        "actual_depth": 3,
+        "initial_tracker_depth": 2,
+        "admitted": false,
+        "denial_reasons": [
+          "delegation_depth: 3 > 2 (signed envelope)"
+        ],
+        "signature_valid": true,
+        "budget_condition": false,
+        "identity_condition": true,
+        "tracker_depth": 2
+      }
+    ],
+    "tree": {
+      "width": 3,
+      "depth": 3,
+      "grants": 40,
+      "unique_ids": 40,
+      "all_signatures_valid": true,
+      "baseline_admitted": 40,
+      "denied_after_one_leaf_revoked": 1,
+      "target_leaf_denied": true,
+      "off_target_denials": 0,
+      "same_child_principal_label_and_scope": true
+    }
+  },
+  "original_tests": {
+    "run": true,
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "tests/test_core.py",
+      "tests/test_budget.py",
+      "tests/test_pdp.py"
+    ],
+    "modules": [
+      "tests/test_core.py",
+      "tests/test_budget.py",
+      "tests/test_pdp.py"
+    ],
+    "returncode": 0,
+    "passed": 47,
+    "output": "...............................................                          [100%]\n47 passed in 0.24s",
+    "plugin_autoload_disabled": true
+  },
+  "checks": {
+    "baseline_reproduces_depth_issuance": true,
+    "patched_refuses_over_depth_at_issuance": true,
+    "all_direct_grant_signatures_valid": true,
+    "baseline_admits_all_direct_depth_probes": true,
+    "patched_admits_legal_depth_and_denies_over_depth": true,
+    "patched_over_depth_denial_is_depth_budget": true,
+    "baseline_tree_reproduces_collision": true,
+    "patched_tree_unique_ids": true,
+    "both_trees_valid_and_baseline_available": true,
+    "patched_revokes_only_target_leaf": true,
+    "baseline_checkout_unchanged": true,
+    "patch_applies_cleanly_to_baseline": true,
+    "relevant_original_tests_pass": true
+  },
+  "all_checks_pass": true,
+  "semantics_and_limits": [
+    "narrow() now raises ValueError before issuing a child beyond its parent's signed maximum depth.",
+    "PDP admission independently compares the signed chain's depth with the signed cap, even with an unseeded or looser runtime tracker.",
+    "UUIDv4 IDs replace depth-derived child IDs; this provides probabilistic per-grant uniqueness, not a distributed allocation guarantee.",
+    "Root IDs remain caller supplied. Previously issued colliding envelopes are not migrated; those would require reissuance or a separate migration policy.",
+    "The fixture uses repeated child labels and scope; grants remain independently identifiable and a selected leaf alone is revoked.",
+    "Exact-ID revocation semantics are preserved. Ancestor-cascade revocation is neither added nor claimed.",
+    "The shared test HMAC trust model, issuer authentication, other budget dimensions, persistence and composition wiring are unchanged.",
+    "The original adaptive overflow case now raises at issuance; its legacy expected output must be updated if run against this patch.",
+    "All checks are bounded local synthetic regressions. No cryptographic audit, live exploit, deployment guarantee or exhaustive proof is claimed."
+  ]
+}

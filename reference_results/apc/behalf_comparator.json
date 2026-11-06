@@ -1,0 +1,920 @@
+{
+  "repository": "https://github.com/novaai0401-ui/agent-authority",
+  "commit": "556f91cc7f356a74d625d798321ad998288f1ab0",
+  "commit_date": "2026-06-14T12:25:02+05:30",
+  "license": "MIT",
+  "python": "3.12.11 (main, Jun  7 2025, 12:31:44)  [GCC 15.1.0 64 bit (AMD64)]",
+  "source_sha256": {
+    "python/agent_authority/behalf.py": "defe077a19a97100f573de725f167e5182f3d94b189ef445ccf1f6905de5eab3",
+    "python/agent_authority/mandate.py": "0104abb0befffbc28e7223ff5edb3b0d693bcfe96e7c762f0d0082679faa15a5",
+    "python/agent_authority/crypto.py": "c7fc307b68a188027437b61f794ee074b4896d4d791f2e8e4de444561310a101",
+    "python/agent_authority/_backend.py": "9c24491b8c1830776682f7d3352a4bb1c8a5e8a82500b40f83cf5f63c7779812",
+    "python/tests/test_behalf.py": "ff08b65fdaca75a2cfddc45d197567459f1b45a5d9dcae333bf275e655e04699",
+    "python/pyproject.toml": "1f27811977fea9a2271baf2d63ccb0eec54be49fa9dc5bc361675710e9ad2d35",
+    "LICENSE": "a93d05333cf53100f5dfbff4924f169040aea6fb1ccee38fcfbc346692681a12"
+  },
+  "official_tests": {
+    "command": [
+      "python",
+      "-B",
+      "-S",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "<workspace>\\alternatives\\behalf_agent_authority\\python",
+    "return_code": 1,
+    "elapsed_seconds": 22.23499999998603,
+    "tests_run": 114,
+    "test_summary_tail": [
+      "AssertionError: 1 != 0",
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 114 tests in 21.218s",
+      "",
+      "FAILED (failures=1, skipped=6)"
+    ],
+    "site_packages_disabled": true,
+    "new_dependencies_installed": false,
+    "failure_output_tail": [
+      "test_enforces_cap_end_to_end (test_improvements.CachingRateStoreTests.test_enforces_cap_end_to_end) ... ok",
+      "test_never_caches_allow (test_improvements.CachingRateStoreTests.test_never_caches_allow) ... ok",
+      "test_emits_verifiable_checkpoints (test_improvements.CheckpointingTests.test_emits_verifiable_checkpoints) ... ok",
+      "test_requires_tenant_token (test_improvements.RequireTenantTests.test_requires_tenant_token) ... ok",
+      "test_checkpoint_detects_tail_deletion (test_rotation.CheckpointTests.test_checkpoint_detects_tail_deletion) ... ok",
+      "test_untrusted_signer_rejected (test_rotation.CheckpointTests.test_untrusted_signer_rejected) ... ok",
+      "test_cannot_untrust_own_key (test_rotation.RotationTests.test_cannot_untrust_own_key) ... ok",
+      "test_rotation_overlap_then_retire (test_rotation.RotationTests.test_rotation_overlap_then_retire) ... ok",
+      "test_bad_version_rejected (test_seal.SealTests.test_bad_version_rejected) ... skipped 'cryptography not installed'",
+      "test_end_to_end (test_seal.SealTests.test_end_to_end) ... skipped 'cryptography not installed'",
+      "test_nondeterministic (test_seal.SealTests.test_nondeterministic) ... skipped 'cryptography not installed'",
+      "test_round_trip (test_seal.SealTests.test_round_trip) ... skipped 'cryptography not installed'",
+      "test_tamper_rejected (test_seal.SealTests.test_tamper_rejected) ... skipped 'cryptography not installed'",
+      "test_wrong_recipient_cannot_open (test_seal.SealTests.test_wrong_recipient_cannot_open) ... skipped 'cryptography not installed'",
+      "test_caps_at_capacity_after_idle (test_token_bucket.TokenBucketTests.test_caps_at_capacity_after_idle) ... ok",
+      "test_drops_into_engine (test_token_bucket.TokenBucketTests.test_drops_into_engine) ... ok",
+      "test_initial_burst_then_deny (test_token_bucket.TokenBucketTests.test_initial_burst_then_deny) ... ok",
+      "test_interchangeable_interface (test_token_bucket.TokenBucketTests.test_interchangeable_interface) ... ok",
+      "test_keys_independent (test_token_bucket.TokenBucketTests.test_keys_independent) ... ok",
+      "test_nonpositive_denies (test_token_bucket.TokenBucketTests.test_nonpositive_denies) ... ok",
+      "test_refills_over_time (test_token_bucket.TokenBucketTests.test_refills_over_time) ... ok",
+      "test_grant_authorize_revoke_lifecycle (test_tooling.CliTests.test_grant_authorize_revoke_lifecycle) ... ok",
+      "test_quickstart_and_lint (test_tooling.CliTests.test_quickstart_and_lint) ... FAIL",
+      "test_initialize_and_tools (test_tooling.McpServerTests.test_initialize_and_tools) ... ok",
+      "test_tools_call_roundtrip (test_tooling.McpServerTests.test_tools_call_roundtrip) ... ok",
+      "test_unknown_method_errors (test_tooling.McpServerTests.test_unknown_method_errors) ... ok",
+      "test_copilot_uses_servers_key_and_stdio (test_tooling.QuickstartTests.test_copilot_uses_servers_key_and_stdio) ... ok",
+      "test_custom_surface (test_tooling.QuickstartTests.test_custom_surface) ... ok",
+      "test_gpt_function_tools (test_tooling.QuickstartTests.test_gpt_function_tools) ... ok",
+      "test_main_surfaces_present (test_tooling.QuickstartTests.test_main_surfaces_present) ... ok",
+      "test_mcp_surface_renders_config (test_tooling.QuickstartTests.test_mcp_surface_renders_config) ... ok",
+      "test_file_rate_store_persists (test_transfer.TransferTests.test_file_rate_store_persists) ... ok",
+      "test_mcp_request_mandate_is_usable (test_transfer.TransferTests.test_mcp_request_mandate_is_usable) ... ok",
+      "test_public_serialize_is_inspect_only (test_transfer.TransferTests.test_public_serialize_is_inspect_only) ... ok",
+      "test_serialize_with_key_transfers_holder_credential (test_transfer.TransferTests.test_serialize_with_key_transfers_holder_credential) ... ok",
+      "test_committed_vector_authorizes (test_vector.VectorTests.test_committed_vector_authorizes) ... ok",
+      "test_tampered_vector_rejected (test_vector.VectorTests.test_tampered_vector_rejected) ... ok",
+      "",
+      "======================================================================",
+      "FAIL: test_quickstart_and_lint (test_tooling.CliTests.test_quickstart_and_lint)",
+      "----------------------------------------------------------------------",
+      "Traceback (most recent call last):",
+      "  File \"<workspace>\\alternatives\\behalf_agent_authority\\python\\tests\\test_tooling.py\", line 113, in test_quickstart_and_lint",
+      "    self.assertEqual(qs.returncode, 0)",
+      "AssertionError: 1 != 0",
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 114 tests in 21.218s",
+      "",
+      "FAILED (failures=1, skipped=6)"
+    ],
+    "reused_previous_identical_source_run": true
+  },
+  "scope": "Independent local positive control for unique sibling grant IDs and branch-local/cascading revocation only. This does not test a maximum-depth property, cryptographic security, distributed revocation freshness, actual model behavior, or tool execution.",
+  "caveats": [
+    "Small independent project; no independent cryptographic audit claimed.",
+    "Optional native/sealed-credential tests may skip when site packages are disabled.",
+    "Authorization checks use one process and a shared in-memory revocation store.",
+    "The fixed-clock fixture checks declared API behavior, not wall-clock expiry.",
+    "The full official suite does NOT pass in this environment: 114 tests, one CLI quickstart/lint failure, six optional cryptography skips. Targeted core tests are reported separately and do not erase that failure."
+  ],
+  "official_core_tests": {
+    "command": [
+      "python",
+      "-B",
+      "-S",
+      "-m",
+      "unittest",
+      "-v",
+      "test_behalf.RevocationTests.test_revoke_self",
+      "test_behalf.RevocationTests.test_revoke_root_cascades",
+      "test_behalf.RevocationTests.test_revoke_child_keeps_siblings"
+    ],
+    "test_names": [
+      "test_behalf.RevocationTests.test_revoke_self",
+      "test_behalf.RevocationTests.test_revoke_root_cascades",
+      "test_behalf.RevocationTests.test_revoke_child_keeps_siblings"
+    ],
+    "return_code": 0,
+    "elapsed_seconds": 1.264999999984866,
+    "tests_run": 3,
+    "output": "test_revoke_self (test_behalf.RevocationTests.test_revoke_self) ... ok\ntest_revoke_root_cascades (test_behalf.RevocationTests.test_revoke_root_cascades) ... ok\ntest_revoke_child_keeps_siblings (test_behalf.RevocationTests.test_revoke_child_keeps_siblings) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.842s\n\nOK",
+    "site_packages_disabled": true
+  },
+  "fixture": {
+    "passed": true,
+    "authorization_observations": 18,
+    "checks": {
+      "distinct_sibling_ids_with_identical_labels_and_scope": true,
+      "unrevoked_positive_controls": true,
+      "child_revocation_denies_its_descendant": true,
+      "child_revocation_preserves_sibling_and_sibling_descendant": true,
+      "child_revocation_preserves_root": true,
+      "root_revocation_denies_all_descendants": true,
+      "root_revocation_preserves_an_independent_root": true,
+      "every_expected_denial_is_revocation_specific": true
+    },
+    "ids": {
+      "root": "0ad38242-0c35-4db8-8484-4cde3063df5f",
+      "a": "26153f4a-ded8-4981-a9cf-72ca02f49660",
+      "b": "94a85f90-574e-457e-8531-3fc200a95e71",
+      "aa": "8b77e1df-4622-4fd3-8868-f5b8098fa004",
+      "bb": "c2771fdf-89b2-4d6a-8e48-99e25ac1ebb6",
+      "independent_root": "6a0d7fcd-4eb0-4875-876b-b55626e8990b"
+    },
+    "observations": [
+      {
+        "phase": "before_revocation",
+        "node": "root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "before_revocation",
+        "node": "a",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "before_revocation",
+        "node": "b",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "before_revocation",
+        "node": "aa",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "before_revocation",
+        "node": "bb",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "before_revocation",
+        "node": "independent_root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_child_a_revocation",
+        "node": "root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_child_a_revocation",
+        "node": "a",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (26153f4a-ded8-4981-a9cf-72ca02f49660)"
+      },
+      {
+        "phase": "after_child_a_revocation",
+        "node": "b",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_child_a_revocation",
+        "node": "aa",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (26153f4a-ded8-4981-a9cf-72ca02f49660)"
+      },
+      {
+        "phase": "after_child_a_revocation",
+        "node": "bb",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_child_a_revocation",
+        "node": "independent_root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_root_revocation",
+        "node": "root",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (0ad38242-0c35-4db8-8484-4cde3063df5f)"
+      },
+      {
+        "phase": "after_root_revocation",
+        "node": "a",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (0ad38242-0c35-4db8-8484-4cde3063df5f)"
+      },
+      {
+        "phase": "after_root_revocation",
+        "node": "b",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (0ad38242-0c35-4db8-8484-4cde3063df5f)"
+      },
+      {
+        "phase": "after_root_revocation",
+        "node": "aa",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (0ad38242-0c35-4db8-8484-4cde3063df5f)"
+      },
+      {
+        "phase": "after_root_revocation",
+        "node": "bb",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (0ad38242-0c35-4db8-8484-4cde3063df5f)"
+      },
+      {
+        "phase": "after_root_revocation",
+        "node": "independent_root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      }
+    ]
+  },
+  "topology_fixture": {
+    "passed": true,
+    "branching_factor": 3,
+    "tree_depth": 3,
+    "tree_grants": 40,
+    "tree_leaf_grants": 27,
+    "unique_tree_grant_ids": 40,
+    "baseline_tree_allowed": 40,
+    "after_one_leaf_revocation_tree_allowed": 39,
+    "after_one_leaf_revocation_tree_denied": 1,
+    "revoked_leaf": "0.0.0",
+    "denied_tree_nodes": [
+      "0.0.0"
+    ],
+    "collateral_tree_denials": 0,
+    "independent_positive_control": {
+      "baseline_allowed": true,
+      "after_revocation_allowed": true
+    },
+    "authorization_observations": 82,
+    "same_child_agent_label_and_scope": true,
+    "topology_depth_is_not_a_tested_max_depth_policy": true,
+    "ids": {
+      "root": "342a3d6d-0a31-46d9-a759-8d08795432a2",
+      "0": "22626d01-e153-4b60-9a08-995ceb38c6ff",
+      "1": "575cbed8-0e36-488f-8623-456ff5ac0df6",
+      "2": "758ae2a1-8d7a-4730-b484-35331588c8b3",
+      "0.0": "058239a9-9fbb-46c8-abfe-ab343a90dae5",
+      "0.1": "4efaad55-589d-4c09-90b6-dad134c35d86",
+      "0.2": "93092490-ac80-43c8-a883-aa2259ddff65",
+      "1.0": "7127f50a-fad6-4531-a50c-2de9562001ef",
+      "1.1": "7e44aa36-fe9e-464f-869e-0b8d27028c7b",
+      "1.2": "c1dcf951-58fd-4e88-89c0-fc1a19da481e",
+      "2.0": "0219d12a-3366-47c8-84b0-518e6862e62f",
+      "2.1": "bcb9ab97-4ff5-4a5e-bf50-098ba8287af4",
+      "2.2": "78e03367-1ad6-4e88-9610-b710d59e89d0",
+      "0.0.0": "b327e49e-d599-4540-9ecf-70c3122def8a",
+      "0.0.1": "a69fee40-0cca-4e79-8174-213ddc9dcd21",
+      "0.0.2": "17712734-ae1b-49f0-8a9e-e10e72377aea",
+      "0.1.0": "803d5275-ddb4-4ed4-962c-0c19f2d724e9",
+      "0.1.1": "8e3eeeaa-fec8-44ce-92e1-50fe282c63c3",
+      "0.1.2": "561c2684-3322-46c0-ab9b-b5979d223327",
+      "0.2.0": "4abc1920-923a-44d8-a725-8dd33bd4d7af",
+      "0.2.1": "69331ca7-fda8-4dc3-b708-ae69943d04b6",
+      "0.2.2": "95bb535d-bf7c-4ad0-b0ef-fc62de1caa71",
+      "1.0.0": "a4158fd7-31c5-4c1c-94fb-f942d5a9fd02",
+      "1.0.1": "9eb262ad-d5da-4fb3-84b9-be18e83f39d7",
+      "1.0.2": "a7149b33-a7ce-4d33-b76a-fe35b004a19c",
+      "1.1.0": "2b9c44a2-3edb-42e0-9e51-5e071a171a92",
+      "1.1.1": "a000c09e-a735-43dc-99df-f63ebd4977be",
+      "1.1.2": "33ed5ebb-8694-4e74-88de-1da1629968fb",
+      "1.2.0": "af1ab195-ab4c-499f-a14c-9da79e2953d1",
+      "1.2.1": "a4e13980-e886-4d95-9ea8-b3ab27f571f8",
+      "1.2.2": "2d7dae3b-dc42-4f8e-b083-3d63fca88176",
+      "2.0.0": "ea0b4848-d80a-48a7-bc22-0c88da7ce3ae",
+      "2.0.1": "9c76dcbb-0909-4347-a549-076e189f6902",
+      "2.0.2": "a8ccc466-d319-4270-910e-d632d93fd3c3",
+      "2.1.0": "d3fdb0d2-45e2-4b26-8828-0e7729c28e06",
+      "2.1.1": "e09063e2-f915-48e7-9719-64ccd279813e",
+      "2.1.2": "a19b388e-448d-4436-81b4-bc8ac6a5e17e",
+      "2.2.0": "2c9305a6-a935-4546-bc65-85193ec9e35c",
+      "2.2.1": "af141f17-f6db-4b7a-b72b-8882a26dbd37",
+      "2.2.2": "1bafdee3-8c7b-44d8-97b2-9230e9e568b7"
+    },
+    "observations": [
+      {
+        "phase": "baseline",
+        "node": "root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.0.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "0.2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.0.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "1.2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.0.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "2.2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "baseline",
+        "node": "independent_root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.0.0",
+        "expected_allowed": false,
+        "observed_allowed": false,
+        "reason": "authorization denied for \"read:calendar\": revoked (b327e49e-d599-4540-9ecf-70c3122def8a)"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "0.2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.0.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "1.2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.0.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.0.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.0.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.1.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.1.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.1.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.2.0",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.2.1",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "2.2.2",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      },
+      {
+        "phase": "after_one_leaf_revocation",
+        "node": "independent_root",
+        "expected_allowed": true,
+        "observed_allowed": true,
+        "reason": "authorized"
+      }
+    ]
+  },
+  "status": "core_and_fixture_passed_full_suite_has_cli_failure",
+  "tracked_source_unchanged": true
+}

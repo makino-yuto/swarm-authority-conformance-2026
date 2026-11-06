@@ -1,0 +1,296 @@
+{
+  "repository": "https://github.com/major-matters/mandatekit",
+  "commit": "fc6a3745ef3eab5ee1e8842f275a5666cf9ffc4f",
+  "python": "3.12.14",
+  "source_sha256": {
+    "python/mandatekit/mandate.py": "1e3e5adf9cac83a31e301612a07e01cf7e3946621e43b895ec860a45f4bf4272",
+    "python/mandatekit/verifier.py": "285675a8681e493c9c6a75c3a234ec696e478adf6d9815edd3bea635afd47dc7",
+    "python/mandatekit/signing.py": "80efcf0b9d88345075ad256379a1cdba75d72dfbcd55e15933c6362be30fb3dd",
+    "python/tests/test_mandatekit.py": "0168c2eb27fa886356bd41080fddc9442a60bf7809f12b3ccfb05927e95f6423",
+    "python/tests/test_v02.py": "064db715be1d43f9537d3c9f28a0d3adb86f7c5d9541828024d2283307872c71",
+    "README.md": "f5d6356b4a451653b1a6a90012af51d975e2e4485d2921e48797181bfb841ae3",
+    "LICENSE": "bb4ece973204569386db9890bc89e9f8469bb5e18cdd8dc184baa94e0199b22d"
+  },
+  "upstream_standalone_tests": [
+    {
+      "suite": "python/tests/test_mandatekit.py",
+      "command": [
+        "python",
+        "-B",
+        "-c",
+        "import sys,runpy; sys.path.insert(0,\".\"); runpy.run_path('tests/test_mandatekit.py',run_name=\"__main__\")"
+      ],
+      "cwd": "<workspace>\\alternatives\\mandatekit\\python",
+      "returncode": 0,
+      "passed": 30,
+      "total": 30,
+      "stdout": "  PASS  test_allow_unverified_issuer_opt_in\n  PASS  test_anthropic_parser_offline_with_stubbed_client\n  PASS  test_attack1_forgery_rejected_by_issuer_pinning\n  PASS  test_attack2_empty_constraints_denied\n  PASS  test_attack3_empty_category_list_denied\n  PASS  test_attack4_unenforceable_constraint_denied\n  PASS  test_attack5_nested_dos_rejected_without_crash\n  PASS  test_canonical_future_expiry_allowed\n  PASS  test_compile_canonical_example\n  PASS  test_compile_produces_valid_signed_mandate\n  PASS  test_constraints_from_data_maps_and_drops_nulls\n  PASS  test_currency_symbols\n  PASS  test_ed25519_regression_vector\n  PASS  test_ed25519_roundtrip\n  PASS  test_extract_json_variants\n  PASS  test_float_amount_rejected_at_build\n  PASS  test_float_txn_amount_denied\n  PASS  test_injected_intent_scorer_can_deny\n  PASS  test_intent_scorer_error_does_not_crash\n  PASS  test_iso_expiry\n  PASS  test_merchant_allow_list\n  PASS  test_naive_expiry_treated_as_utc\n  PASS  test_non_iso_expiry_is_denied\n  PASS  test_unverified_issuer_default_fails_closed\n  PASS  test_verify_allows_in_scope\n  PASS  test_verify_denies_expired\n  PASS  test_verify_denies_over_amount\n  PASS  test_verify_denies_wrong_category\n  PASS  test_verify_denies_wrong_currency\n  PASS  test_verify_rejects_tampered_mandate\n\n30/30 passed\n",
+      "stderr": ""
+    },
+    {
+      "suite": "python/tests/test_v02.py",
+      "command": [
+        "python",
+        "-B",
+        "-c",
+        "import sys,runpy; sys.path.insert(0,\".\"); runpy.run_path('tests/test_v02.py',run_name=\"__main__\")"
+      ],
+      "cwd": "<workspace>\\alternatives\\mandatekit\\python",
+      "returncode": 0,
+      "passed": 31,
+      "total": 31,
+      "stdout": "  PASS  test_a_narrower_child_verifies_against_the_root_issuer\n  PASS  test_build_carries_the_new_fields_and_validate_accepts_them\n  PASS  test_build_rejects_bad_inputs\n  PASS  test_chain_structure_failures\n  PASS  test_counterparties_count_as_scope\n  PASS  test_cross_language_fixture\n  PASS  test_crosswalk_carries_the_new_fields\n  PASS  test_delegate_mandate_inherits_unless_told_otherwise\n  PASS  test_flat_allow_list_still_means_every_allowed_verb\n  PASS  test_hostile_new_fields_never_raise\n  PASS  test_iso_fixture\n  PASS  test_limits_require_a_store\n  PASS  test_malformed_limits_deny_with_a_store\n  PASS  test_malformed_not_before_denies\n  PASS  test_max_uses_counts_only_the_filtered_verbs\n  PASS  test_not_before_and_expiry_have_distinct_codes\n  PASS  test_parser_fixture\n  PASS  test_pay_to_the_bank_is_denied_by_counterparty_scope\n  PASS  test_record_use_rejects_garbage_and_walks_the_chain\n  PASS  test_revocation_list_round_trip_and_signature\n  PASS  test_revocation_paths\n  PASS  test_revoked_parent_takes_the_children_with_it\n  PASS  test_store_failures_are_denials_not_exceptions\n  PASS  test_tampering_anywhere_in_the_chain_breaks_the_leaf_signature\n  PASS  test_three_links\n  PASS  test_validate_reports_malformed_new_fields\n  PASS  test_version_gates_the_new_keys\n  PASS  test_versions_are_aligned\n  PASS  test_widening_is_denied_with_the_field_named\n  PASS  test_window_limits_slide\n  PASS  test_window_narrowing\n\n31/31 passed\n",
+      "stderr": ""
+    }
+  ],
+  "depth_comparator": {
+    "sdk_version": "0.2.1",
+    "crypto_backend": "cryptography",
+    "fixed_now": "2026-11-06T00:00:00+00:00",
+    "transaction": {
+      "action": "read",
+      "merchant": "synthetic-merchant",
+      "category": "synthetic-category",
+      "amount": {
+        "value": 0,
+        "currency": "USD"
+      }
+    },
+    "cases": [
+      {
+        "root_max_delegation_depth": 1,
+        "actual_delegation_edges": 1,
+        "root_subject_remaining_depth": 1,
+        "mid_subject_remaining_depth": 0,
+        "all_link_signatures_valid": true,
+        "expected_decision": "allow",
+        "decision": "allow",
+        "signature_valid": true,
+        "failed": [],
+        "matched": [
+          {
+            "constraint": "delegation",
+            "passed": true,
+            "detail": "delegation chain of 2 links roots in fixture-root-cap-1"
+          },
+          {
+            "constraint": "issuer_trusted",
+            "passed": true,
+            "detail": "delegation chain roots in a trusted issuer key"
+          },
+          {
+            "constraint": "has_scope",
+            "passed": true,
+            "detail": "mandate defines spending limits"
+          },
+          {
+            "constraint": "not_expired",
+            "passed": true,
+            "detail": "within validity window"
+          },
+          {
+            "constraint": "category",
+            "passed": true,
+            "detail": "synthetic-category in ['synthetic-category']"
+          },
+          {
+            "constraint": "merchant_allow",
+            "passed": true,
+            "detail": "'synthetic-merchant' is on the allow-list"
+          },
+          {
+            "constraint": "amount",
+            "passed": true,
+            "detail": "0 USD <= cap 0 USD"
+          },
+          {
+            "constraint": "action",
+            "passed": true,
+            "detail": "action read in ['read']"
+          }
+        ],
+        "rationale": "in scope: delegation chain of 2 links roots in fixture-root-cap-1; delegation chain roots in a trusted issuer key; mandate defines spending limits; within validity window; synthetic-category in ['synthetic-category']; 'synthetic-merchant' is on the allow-list; 0 USD <= cap 0 USD; action read in ['read']"
+      },
+      {
+        "root_max_delegation_depth": 1,
+        "actual_delegation_edges": 2,
+        "root_subject_remaining_depth": 1,
+        "mid_subject_remaining_depth": 0,
+        "all_link_signatures_valid": true,
+        "expected_decision": "deny",
+        "decision": "deny",
+        "signature_valid": true,
+        "failed": [
+          {
+            "constraint": "delegation",
+            "passed": false,
+            "detail": "parent fixture-mid-cap-1 does not allow delegation"
+          },
+          {
+            "constraint": "issuer_trusted",
+            "passed": false,
+            "detail": "delegation chain does not root in a trusted issuer key"
+          }
+        ],
+        "matched": [
+          {
+            "constraint": "has_scope",
+            "passed": true,
+            "detail": "mandate defines spending limits"
+          },
+          {
+            "constraint": "not_expired",
+            "passed": true,
+            "detail": "within validity window"
+          },
+          {
+            "constraint": "category",
+            "passed": true,
+            "detail": "synthetic-category in ['synthetic-category']"
+          },
+          {
+            "constraint": "merchant_allow",
+            "passed": true,
+            "detail": "'synthetic-merchant' is on the allow-list"
+          },
+          {
+            "constraint": "amount",
+            "passed": true,
+            "detail": "0 USD <= cap 0 USD"
+          },
+          {
+            "constraint": "action",
+            "passed": true,
+            "detail": "action read in ['read']"
+          }
+        ],
+        "rationale": "out of scope: parent fixture-mid-cap-1 does not allow delegation; delegation chain does not root in a trusted issuer key"
+      },
+      {
+        "root_max_delegation_depth": 2,
+        "actual_delegation_edges": 1,
+        "root_subject_remaining_depth": 2,
+        "mid_subject_remaining_depth": 1,
+        "all_link_signatures_valid": true,
+        "expected_decision": "allow",
+        "decision": "allow",
+        "signature_valid": true,
+        "failed": [],
+        "matched": [
+          {
+            "constraint": "delegation",
+            "passed": true,
+            "detail": "delegation chain of 2 links roots in fixture-root-cap-2"
+          },
+          {
+            "constraint": "issuer_trusted",
+            "passed": true,
+            "detail": "delegation chain roots in a trusted issuer key"
+          },
+          {
+            "constraint": "has_scope",
+            "passed": true,
+            "detail": "mandate defines spending limits"
+          },
+          {
+            "constraint": "not_expired",
+            "passed": true,
+            "detail": "within validity window"
+          },
+          {
+            "constraint": "category",
+            "passed": true,
+            "detail": "synthetic-category in ['synthetic-category']"
+          },
+          {
+            "constraint": "merchant_allow",
+            "passed": true,
+            "detail": "'synthetic-merchant' is on the allow-list"
+          },
+          {
+            "constraint": "amount",
+            "passed": true,
+            "detail": "0 USD <= cap 0 USD"
+          },
+          {
+            "constraint": "action",
+            "passed": true,
+            "detail": "action read in ['read']"
+          }
+        ],
+        "rationale": "in scope: delegation chain of 2 links roots in fixture-root-cap-2; delegation chain roots in a trusted issuer key; mandate defines spending limits; within validity window; synthetic-category in ['synthetic-category']; 'synthetic-merchant' is on the allow-list; 0 USD <= cap 0 USD; action read in ['read']"
+      },
+      {
+        "root_max_delegation_depth": 2,
+        "actual_delegation_edges": 2,
+        "root_subject_remaining_depth": 2,
+        "mid_subject_remaining_depth": 1,
+        "all_link_signatures_valid": true,
+        "expected_decision": "allow",
+        "decision": "allow",
+        "signature_valid": true,
+        "failed": [],
+        "matched": [
+          {
+            "constraint": "delegation",
+            "passed": true,
+            "detail": "delegation chain of 3 links roots in fixture-root-cap-2"
+          },
+          {
+            "constraint": "issuer_trusted",
+            "passed": true,
+            "detail": "delegation chain roots in a trusted issuer key"
+          },
+          {
+            "constraint": "has_scope",
+            "passed": true,
+            "detail": "mandate defines spending limits"
+          },
+          {
+            "constraint": "not_expired",
+            "passed": true,
+            "detail": "within validity window"
+          },
+          {
+            "constraint": "category",
+            "passed": true,
+            "detail": "synthetic-category in ['synthetic-category']"
+          },
+          {
+            "constraint": "merchant_allow",
+            "passed": true,
+            "detail": "'synthetic-merchant' is on the allow-list"
+          },
+          {
+            "constraint": "amount",
+            "passed": true,
+            "detail": "0 USD <= cap 0 USD"
+          },
+          {
+            "constraint": "action",
+            "passed": true,
+            "detail": "action read in ['read']"
+          }
+        ],
+        "rationale": "in scope: delegation chain of 3 links roots in fixture-root-cap-2; delegation chain roots in a trusted issuer key; mandate defines spending limits; within validity window; synthetic-category in ['synthetic-category']; 'synthetic-merchant' is on the allow-list; 0 USD <= cap 0 USD; action read in ['read']"
+      }
+    ],
+    "checks": {
+      "all_raw_link_signatures_valid": true,
+      "all_expected_decisions_match": true,
+      "three_legal_cases_allow": true,
+      "over_depth_case_denies": true,
+      "over_depth_reason_is_delegation": true
+    }
+  },
+  "scope_limits": [
+    "Experimental unaudited v0 SDK; this is not a production-security endorsement.",
+    "Only the documented Python core/v0.2 standalone suites were run; not TypeScript, optional property tests, MCP proxy or model integrations.",
+    "The comparator tests delegation-edge depth only. MandateKit uses a remaining-depth budget at each signed link; APC models a session budget tracker. No overall system ranking is supported.",
+    "The negative fixture has valid cryptographic signatures and trusted root key, but a prohibited extra delegation edge. It is not a signature forgery.",
+    "On a failed chain walk, issuer_trusted also fails because root_key is unset; this is a downstream consequence of the delegation failure, not an independently planted wrong issuer.",
+    "The fixture uses public build/delegate/sign/verify APIs unchanged; the internal public-key helper is used only to prepare deterministic synthetic test keys, as upstream tests do.",
+    "No transactions were executed; results concern local verification decisions."
+  ],
+  "all_checks_pass": true
+}

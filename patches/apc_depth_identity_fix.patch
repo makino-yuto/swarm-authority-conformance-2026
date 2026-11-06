@@ -1,0 +1,61 @@
+diff --git a/apc/core.py b/apc/core.py
+index 9927cad..e1c4cc0 100644
+--- a/apc/core.py
++++ b/apc/core.py
+@@ -13,6 +13,7 @@ import hmac
+ import json
+ import re
+ import time
++import uuid
+ from dataclasses import dataclass, field
+ from enum import Enum
+ 
+@@ -295,11 +296,17 @@ class AuthorizationEnvelope:
+ 
+         S(pᵢ) = S(pᵢ₋₁) ⊓ S_role(pᵢ)
+         """
++        child_depth = self.delegation_depth + 1
++        if child_depth > self.budget_spec.max_delegation_depth:
++            raise ValueError(
++                f"delegation_depth: {child_depth} > "
++                f"{self.budget_spec.max_delegation_depth} (signed envelope)"
++            )
+         narrowed_scope = self.effective_scope.meet(delegate.role_scope)
+         new_chain = list(self.chain) + [delegate]
+ 
+         child = AuthorizationEnvelope(
+-            envelope_id=f"{self.envelope_id}:{len(new_chain) - 1}",
++            envelope_id=str(uuid.uuid4()),
+             task_session_id=self.task_session_id,
+             originating_principal=self.originating_principal,
+             effective_scope=narrowed_scope,
+diff --git a/apc/pdp.py b/apc/pdp.py
+index 7bbf96e..6f24574 100644
+--- a/apc/pdp.py
++++ b/apc/pdp.py
+@@ -451,7 +451,7 @@ class PolicyDecisionPoint:
+             denials.append(c2b.detail)
+ 
+         # Budget check
+-        c2c = self._check_budget(action, budget)
++        c2c = self._check_budget(action, budget, envelope)
+         conditions["budget"] = c2c
+         if not c2c.passed:
+             denials.append(c2c.detail)
+@@ -603,8 +603,15 @@ class PolicyDecisionPoint:
+         return ConditionResult("composition_closure", True)
+ 
+     def _check_budget(
+-        self, action: ProposedAction, budget: BudgetState
++        self, action: ProposedAction, budget: BudgetState,
++        envelope: AuthorizationEnvelope,
+     ) -> ConditionResult:
++        if envelope.delegation_depth > envelope.budget_spec.max_delegation_depth:
++            return ConditionResult(
++                "budget", False,
++                f"delegation_depth: {envelope.delegation_depth} > "
++                f"{envelope.budget_spec.max_delegation_depth} (signed envelope)",
++            )
+         cost = ActionCost(
+             blast_radius=action.blast_radius,
+             irreversible_effects=action.irreversible_effects,

@@ -1,0 +1,701 @@
+{
+  "branching_tree": {
+    "all_baseline_admitted": true,
+    "all_other_levels_admitted": true,
+    "all_same_level_revoked": true,
+    "all_signatures_valid": true,
+    "depth": 3,
+    "per_level": [
+      {
+        "denied_after_one_leaf_revocation": 0,
+        "envelopes": 1,
+        "level": 0,
+        "unique_ids": 1
+      },
+      {
+        "denied_after_one_leaf_revocation": 0,
+        "envelopes": 3,
+        "level": 1,
+        "unique_ids": 1
+      },
+      {
+        "denied_after_one_leaf_revocation": 0,
+        "envelopes": 9,
+        "level": 2,
+        "unique_ids": 1
+      },
+      {
+        "denied_after_one_leaf_revocation": 27,
+        "envelopes": 27,
+        "level": 3,
+        "unique_ids": 1
+      }
+    ],
+    "total_envelopes": 40,
+    "unique_ids_total": 4,
+    "width": 3
+  },
+  "default_depth_tracker": {
+    "depth_budget_results": [
+      {
+        "decision": {
+          "admitted": true,
+          "denial_reasons": [],
+          "identity_binding": true,
+          "recorded_delegation_depth_after_action": 0
+        },
+        "depth": 0,
+        "depth_cap": 2,
+        "signature_valid": true
+      },
+      {
+        "decision": {
+          "admitted": true,
+          "denial_reasons": [],
+          "identity_binding": true,
+          "recorded_delegation_depth_after_action": 0
+        },
+        "depth": 1,
+        "depth_cap": 2,
+        "signature_valid": true
+      },
+      {
+        "decision": {
+          "admitted": true,
+          "denial_reasons": [],
+          "identity_binding": true,
+          "recorded_delegation_depth_after_action": 0
+        },
+        "depth": 2,
+        "depth_cap": 2,
+        "signature_valid": true
+      },
+      {
+        "decision": {
+          "admitted": true,
+          "denial_reasons": [],
+          "identity_binding": true,
+          "recorded_delegation_depth_after_action": 0
+        },
+        "depth": 3,
+        "depth_cap": 2,
+        "signature_valid": true
+      },
+      {
+        "decision": {
+          "admitted": true,
+          "denial_reasons": [],
+          "identity_binding": true,
+          "recorded_delegation_depth_after_action": 0
+        },
+        "depth": 4,
+        "depth_cap": 2,
+        "signature_valid": true
+      },
+      {
+        "decision": {
+          "admitted": true,
+          "denial_reasons": [],
+          "identity_binding": true,
+          "recorded_delegation_depth_after_action": 0
+        },
+        "depth": 5,
+        "depth_cap": 2,
+        "signature_valid": true
+      },
+      {
+        "decision": {
+          "admitted": true,
+          "denial_reasons": [],
+          "identity_binding": true,
+          "recorded_delegation_depth_after_action": 0
+        },
+        "depth": 6,
+        "depth_cap": 2,
+        "signature_valid": true
+      }
+    ]
+  },
+  "depth_ablation": {
+    "cases": {
+      "legal_depth_control": {
+        "action_irreversible_effects": 1,
+        "admitted": true,
+        "budget_after": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 1,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "budget_before": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 0,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "conditions": {
+          "approval_binding": true,
+          "budget": true,
+          "composition_closure": true,
+          "context_binding": true,
+          "evidence_commitment": true,
+          "identity_binding": true,
+          "intent_binding": true,
+          "scope_attenuation": true
+        },
+        "denial_reasons": [],
+        "envelope_depth": 2,
+        "signature_valid": true,
+        "signed_depth_cap": 2
+      },
+      "legal_depth_with_irreversible_preload": {
+        "action_irreversible_effects": 1,
+        "admitted": false,
+        "budget_after": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 5,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "budget_before": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 5,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "conditions": {
+          "approval_binding": true,
+          "budget": false,
+          "composition_closure": true,
+          "context_binding": true,
+          "evidence_commitment": true,
+          "identity_binding": true,
+          "intent_binding": true,
+          "scope_attenuation": true
+        },
+        "denial_reasons": [
+          "budget violation: ('irreversible_effects: 6 > 5',)"
+        ],
+        "envelope_depth": 2,
+        "signature_valid": true,
+        "signed_depth_cap": 2
+      },
+      "published_confound": {
+        "action_irreversible_effects": 1,
+        "admitted": false,
+        "budget_after": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 5,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "budget_before": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 5,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "conditions": {
+          "approval_binding": true,
+          "budget": false,
+          "composition_closure": true,
+          "context_binding": true,
+          "evidence_commitment": true,
+          "identity_binding": true,
+          "intent_binding": true,
+          "scope_attenuation": true
+        },
+        "denial_reasons": [
+          "budget violation: ('irreversible_effects: 6 > 5',)"
+        ],
+        "envelope_depth": 3,
+        "signature_valid": true,
+        "signed_depth_cap": 2
+      },
+      "remove_irreversible_action_cost": {
+        "action_irreversible_effects": 0,
+        "admitted": true,
+        "budget_after": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 5,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "budget_before": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 5,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "conditions": {
+          "approval_binding": true,
+          "budget": true,
+          "composition_closure": true,
+          "context_binding": true,
+          "evidence_commitment": true,
+          "identity_binding": true,
+          "intent_binding": true,
+          "scope_attenuation": true
+        },
+        "denial_reasons": [],
+        "envelope_depth": 3,
+        "signature_valid": true,
+        "signed_depth_cap": 2
+      },
+      "remove_irreversible_preload": {
+        "action_irreversible_effects": 1,
+        "admitted": true,
+        "budget_after": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 1,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "budget_before": {
+          "cross_domain_used": false,
+          "cumulative_blast_radius": 0.0,
+          "cumulative_cost": 0.0,
+          "cumulative_irreversible": 0,
+          "current_delegation_depth": 2,
+          "peak_sensitivity": "public"
+        },
+        "conditions": {
+          "approval_binding": true,
+          "budget": true,
+          "composition_closure": true,
+          "context_binding": true,
+          "evidence_commitment": true,
+          "identity_binding": true,
+          "intent_binding": true,
+          "scope_attenuation": true
+        },
+        "denial_reasons": [],
+        "envelope_depth": 3,
+        "signature_valid": true,
+        "signed_depth_cap": 2
+      }
+    },
+    "checks": {
+      "all_signatures_valid": true,
+      "depth_state_stays_two": true,
+      "legal_depth_also_denied_by_preload": true,
+      "published_confound_denies": true,
+      "published_denial_is_irreversible_not_depth": true,
+      "remove_action_cost_admits_depth_three": true,
+      "remove_preload_admits_depth_three": true,
+      "upstream_reports_overflow_blocked": true
+    },
+    "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+    "repository": "https://github.com/xmuruaga/bounded-agents",
+    "upstream_eval": [
+      {
+        "blocked": false,
+        "name": "Depth within budget (depth=2, max=2)",
+        "reason": "admitted"
+      },
+      {
+        "blocked": true,
+        "name": "Depth overflow (depth=3, max=2)",
+        "reason": "budget violation: ('irreversible_effects: 6 > 5',)"
+      }
+    ]
+  },
+  "illustrative_issuer_repair": {
+    "all_baseline_admitted": true,
+    "all_signatures_valid": true,
+    "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+    "denied_after_one_leaf_revoked": 1,
+    "depth_cap": 3,
+    "depth_overflow_rejected_at_issuance": true,
+    "envelopes": 40,
+    "repository": "https://github.com/xmuruaga/bounded-agents",
+    "unique_ids": 40,
+    "width": 3
+  },
+  "k_tuple_ablation": {
+    "cases": {
+      "isolated_no_pair_no_k": {
+        "blocked": false,
+        "blocked_at_step": 0,
+        "reason": "all steps admitted"
+      },
+      "isolated_no_pair_with_k": {
+        "blocked": true,
+        "blocked_at_step": 3,
+        "reason": "k-tuple: (('read', 'write', 'send_external'),)"
+      },
+      "original_pairwise_only": {
+        "blocked": true,
+        "blocked_at_step": 3,
+        "reason": "pair: (('read', 'send_external'),)"
+      },
+      "original_pairwise_plus_k": {
+        "blocked": true,
+        "blocked_at_step": 3,
+        "reason": "pair: (('read', 'send_external'),); k-tuple: (('read', 'write', 'send_external'),)"
+      }
+    },
+    "checks": {
+      "isolated_k_addition_blocks": true,
+      "isolated_k_cause_is_k": true,
+      "isolated_no_pair_no_k_admits": true,
+      "original_pairwise_already_blocks": true,
+      "original_pairwise_plus_k_blocks": true,
+      "pairwise_only_cause_is_pair": true
+    },
+    "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+    "repository": "https://github.com/xmuruaga/bounded-agents",
+    "upstream_eval": [
+      {
+        "blocked": true,
+        "name": "k-tuple Bypass (pairwise only)",
+        "reason": "pair: (('read', 'send_external'),)"
+      },
+      {
+        "blocked": true,
+        "name": "k-tuple Bypass (with k-tuples)",
+        "reason": "pair: (('read', 'send_external'),); k-tuple: (('read', 'write', 'send_external'),)"
+      }
+    ]
+  },
+  "metadata": {
+    "external_model_calls": 0,
+    "generated_utc": "2026-11-06T14:09:21.043082+00:00",
+    "network_calls": 0,
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.14",
+    "source_sha256": {
+      "apc/approval.py": "50266518b671cf323eb221eb2a868f62e9284897699dd36e98a1f67c67efd0df",
+      "apc/budget.py": "038b3d43ed760a5f3a207eb6a526f4d26144ad78b38ae15b538187c5de83f84d",
+      "apc/compose.py": "133bbb1624f45628223c2fb820a0df812a4c9124c860344c5aac48047d7f400a",
+      "apc/core.py": "1fb08c22703280723a865fd545595d3562e536085626c005f8dd2748fe15a40b",
+      "apc/pdp.py": "6a89cd90c4cc082e3cefe0387d1d3381b96bce2e5ef40f647479a4e05b512333",
+      "evals/adaptive/run_adaptive.py": "338c88abdd0a2504530fff616a95e367603dff59ed2e2a2f084c58924473ba67"
+    },
+    "upstream_commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+    "upstream_repo": "https://github.com/xmuruaga/bounded-agents"
+  },
+  "persistence_fault": {
+    "checks": {
+      "failed_case_exceeds_cap": true,
+      "failed_first_write_acknowledged": true,
+      "failed_write_still_admitted": true,
+      "normal_case_stays_within_cap": true,
+      "normal_first_admitted": true,
+      "normal_second_denied": true,
+      "same_session_second_action_admitted": true
+    },
+    "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+    "failed_save": {
+      "cost_per_action": 0.6,
+      "decisions": [
+        {
+          "admitted": true,
+          "attempt": 1,
+          "denial_reasons": [],
+          "loaded_cost_before": 0.0,
+          "persisted_cost_after": null,
+          "state_cost_after": 0.6
+        },
+        {
+          "admitted": true,
+          "attempt": 2,
+          "denial_reasons": [],
+          "loaded_cost_before": 0.0,
+          "persisted_cost_after": 0.6,
+          "state_cost_after": 0.6
+        }
+      ],
+      "envelope_signature_valid": true,
+      "fail_first_save": true,
+      "max_cost": 1.0,
+      "save_results": [
+        false,
+        true
+      ],
+      "total_admitted_cost": 1.2
+    },
+    "normal_save_control": {
+      "cost_per_action": 0.6,
+      "decisions": [
+        {
+          "admitted": true,
+          "attempt": 1,
+          "denial_reasons": [],
+          "loaded_cost_before": 0.0,
+          "persisted_cost_after": 0.6,
+          "state_cost_after": 0.6
+        },
+        {
+          "admitted": false,
+          "attempt": 2,
+          "denial_reasons": [
+            "budget violation: ('cost: 1.20 > 1.0',)"
+          ],
+          "loaded_cost_before": 0.6,
+          "persisted_cost_after": 0.6,
+          "state_cost_after": 0.6
+        }
+      ],
+      "envelope_signature_valid": true,
+      "fail_first_save": false,
+      "max_cost": 1.0,
+      "save_results": [
+        true
+      ],
+      "total_admitted_cost": 0.6
+    },
+    "repository": "https://github.com/xmuruaga/bounded-agents"
+  },
+  "restriction_binding": {
+    "checks": {
+      "all_signatures_valid": true,
+      "bound_checker_read_admitted": true,
+      "bound_checker_send_denied": true,
+      "root_checker_read_admitted": true,
+      "root_checker_send_admitted": true,
+      "signed_restriction_present": true
+    },
+    "child_restriction_checker_control": {
+      "bind_child_restrictions": true,
+      "child_signature_valid": true,
+      "results": [
+        {
+          "action": "read_confidential",
+          "admitted": true,
+          "conditions": {
+            "approval_binding": true,
+            "budget": true,
+            "composition_closure": true,
+            "context_binding": true,
+            "evidence_commitment": true,
+            "identity_binding": true,
+            "intent_binding": true,
+            "scope_attenuation": true
+          },
+          "denial_reasons": []
+        },
+        {
+          "action": "external_send",
+          "admitted": false,
+          "conditions": {
+            "approval_binding": true,
+            "budget": true,
+            "composition_closure": false,
+            "context_binding": true,
+            "evidence_commitment": true,
+            "identity_binding": true,
+            "intent_binding": true,
+            "scope_attenuation": true
+          },
+          "denial_reasons": [
+            "composition violation: pair violations: (('read_confidential', 'external_send'),)"
+          ]
+        }
+      ],
+      "signed_child_restriction": [
+        [
+          "read_confidential",
+          "external_send"
+        ]
+      ]
+    },
+    "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+    "repository": "https://github.com/xmuruaga/bounded-agents",
+    "shared_root_checker": {
+      "bind_child_restrictions": false,
+      "child_signature_valid": true,
+      "results": [
+        {
+          "action": "read_confidential",
+          "admitted": true,
+          "conditions": {
+            "approval_binding": true,
+            "budget": true,
+            "composition_closure": true,
+            "context_binding": true,
+            "evidence_commitment": true,
+            "identity_binding": true,
+            "intent_binding": true,
+            "scope_attenuation": true
+          },
+          "denial_reasons": []
+        },
+        {
+          "action": "external_send",
+          "admitted": true,
+          "conditions": {
+            "approval_binding": true,
+            "budget": true,
+            "composition_closure": true,
+            "context_binding": true,
+            "evidence_commitment": true,
+            "identity_binding": true,
+            "intent_binding": true,
+            "scope_attenuation": true
+          },
+          "denial_reasons": []
+        }
+      ],
+      "signed_child_restriction": [
+        [
+          "read_confidential",
+          "external_send"
+        ]
+      ]
+    }
+  },
+  "revocation": {
+    "after_revoking_a_id": {
+      "a": {
+        "admitted": false,
+        "denial_reasons": [
+          "envelope 'env-root:1' has been revoked"
+        ],
+        "identity_binding": null,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "a_child": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "b": {
+        "admitted": false,
+        "denial_reasons": [
+          "envelope 'env-root:1' has been revoked"
+        ],
+        "identity_binding": null,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "root": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      }
+    },
+    "after_revoking_root_id_fresh_registry": {
+      "a": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "a_child": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "b": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "root": {
+        "admitted": false,
+        "denial_reasons": [
+          "envelope 'env-root' has been revoked"
+        ],
+        "identity_binding": null,
+        "recorded_delegation_depth_after_action": 0
+      }
+    },
+    "before_revocation": {
+      "a": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "a_child": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "b": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      },
+      "root": {
+        "admitted": true,
+        "denial_reasons": [],
+        "identity_binding": true,
+        "recorded_delegation_depth_after_action": 0
+      }
+    },
+    "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+    "envelopes": {
+      "a": {
+        "id": "env-root:1",
+        "principal_chain": [
+          "user:owner",
+          "agent:a"
+        ],
+        "signature_valid": true
+      },
+      "a_child": {
+        "id": "env-root:1:2",
+        "principal_chain": [
+          "user:owner",
+          "agent:a",
+          "agent:a-worker"
+        ],
+        "signature_valid": true
+      },
+      "b": {
+        "id": "env-root:1",
+        "principal_chain": [
+          "user:owner",
+          "agent:b"
+        ],
+        "signature_valid": true
+      },
+      "root": {
+        "id": "env-root",
+        "principal_chain": [
+          "user:owner"
+        ],
+        "signature_valid": true
+      }
+    },
+    "invariants": {
+      "a_descendant_still_admitted": true,
+      "all_baselines_admitted": true,
+      "distinct_siblings_share_id": true,
+      "revoked_a_denied": true,
+      "revoked_root_denied": true,
+      "root_descendants_still_admitted": true,
+      "unrelated_b_denied": true
+    },
+    "repository": "https://github.com/xmuruaga/bounded-agents",
+    "source_sha256": {
+      "core.py": "1fb08c22703280723a865fd545595d3562e536085626c005f8dd2748fe15a40b",
+      "pdp.py": "6a89cd90c4cc082e3cefe0387d1d3381b96bce2e5ef40f647479a4e05b512333"
+    }
+  }
+}

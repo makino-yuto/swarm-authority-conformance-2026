@@ -1,0 +1,88 @@
+{
+  "name": "apc-reproduction-v1",
+  "upstreams": [
+    {
+      "name": "bounded_agents",
+      "url": "https://github.com/xmuruaga/bounded-agents.git",
+      "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "mandatekit",
+      "url": "https://github.com/major-matters/mandatekit.git",
+      "commit": "fc6a3745ef3eab5ee1e8842f275a5666cf9ffc4f",
+      "license": "MIT"
+    },
+    {
+      "name": "behalf_agent_authority",
+      "url": "https://github.com/novaai0401-ui/agent-authority.git",
+      "commit": "556f91cc7f356a74d625d798321ad998288f1ab0",
+      "license": "MIT"
+    }
+  ],
+  "original_script_copies_sha256": {
+    "src/run_apc_audit.py": "74a3693ddc7c3c6b0e7c423fe85614c5673338e6f678d8fb4bf8f1324f67ff09",
+    "src/mechanism_conformance.py": "c312232d650c300d78ef368e6ddb8016e94a818b04574605b97078002d66a2dd",
+    "src/apc_depth_ablation.py": "365933bfe200576de8ad632e982e4737aad5bdbcdfbae29354af664b975fb7e4",
+    "src/apc_issuer_repair_demo.py": "484d7c5c45632fc4539848c17bfe5b7b7af1a84b8571d33c6c0ebfc023a95f37",
+    "src/apc_k_tuple_ablation.py": "dfffabfbd7a8bd93caecdb92a5d479cd137e763de056b01a0752d3bc1ef3d344",
+    "src/apc_persistence_poc.py": "dd8235827467cc78b4e12724ee4cc38d4b2e0c5b0b43b1bba44f28be76514fd2",
+    "src/apc_restriction_binding_poc.py": "a54d775881752dbe4e97c32c6b5f9d97ee5b7bdc9c815274c6dafed3c66d89eb",
+    "src/apc_revocation_poc.py": "32c52fcc5ce866e5502144b85b590cc89321220fedb4cb1d0ba2e3e3ec1b455e",
+    "src/mandatekit_comparator.py": "0a458747705706973790253e7193a2990c16da3b08b08feda9431407dbc38366",
+    "src/mandatekit_tree_comparator.py": "6313e4c511a9e23c1825c6df837c477c03af42f3ebf422b93d90ffb07620ac18",
+    "src/behalf_comparator.py": "d871ae9b7f014fda283cccdb348cdb1ebef7f7795ecee108f64ebd90b2c8028c",
+    "src/graph_contract_campaign.py": "8d487964d3f0453679377c8658d3ecce1267964b5281e5f0d402e9cce46ed666",
+    "src/apc_case_study_check.py": "28bedc334440d26719df5d9d204666048e556f13d037e7885bae2ed2c9fd905a",
+    "src/apc_patch_validation.py": "9e374e28b08dd79241e30f05c48c9e0dac82284ff1e612c8426319d39c9f9ff2"
+  },
+  "original_optional_assets_sha256": {
+    "submission/project-image.png": "5c82ebdfdca72893208f18e4fbbfb5b6831af91be9899b98570bd194d04b357a",
+    "submission/make_project_image.py": "8631bd8d9d425f1a35995857c0824636f408677a74a8ec4db9b7e717e7cab9cb",
+    "patches/apc_depth_identity_fix.patch": "9c5e8a99d4702dcd3f8781c0f1cef70f65d184a388856c690a4cea168a23a1fa"
+  },
+  "original_result_snapshot_sha256": {
+    "results/apc/audit.json": "8d0d7285656fa77c170f834e793c32ed9aa9665b5dcf5013e6bc60b2dda8c9cd",
+    "results/apc/diagnostics.json": "ca6a06336a53f07adc9edb877476c1990fb6ce7013c2c8312dbd0719e58f1a65",
+    "results/apc/mandatekit_comparator.json": "3270f6216f7ce9785c8c00da126b6b6edd3092f2678206eb86adf1d8b5b7204a",
+    "results/apc/mandatekit_tree_comparator.json": "0b090ef2a250d97e0d5432bad01599dd243a75d2c9bbb4e44209b471dbd28c27",
+    "results/apc/behalf_comparator.json": "76cdfd58f2863a75ce4f1a8a9544c6915800ab61ded43e4db8804050c4e57c08",
+    "results/apc/graph_contract_campaign.json": "4cef96be8c0cd903103c984cdfbcc8c3c62f4a3634e9f78bf95bcdc0537e1628",
+    "results/apc/case_study_check.json": "fb7b12e144844f1ed1473ccec5e1e61dbce507c9df85771f91db6a083c4277b7",
+    "results/apc/patch_validation.json": "bf4254850fa8c43f639718b34b512c4f58861a1f55021784f9bdbd3b4f372a02"
+  },
+  "graph_campaign_included": true,
+  "case_study_included": true,
+  "patch_validation_included": true,
+  "files_sha256": {
+    "patches/apc_depth_identity_fix.patch": "9c5e8a99d4702dcd3f8781c0f1cef70f65d184a388856c690a4cea168a23a1fa",
+    "README.md": "97f01a48337b8e77a8dd9225aedab65be413e03eb6014a4329ce2553007bae8f",
+    "reference_results/apc/audit.json": "8d0d7285656fa77c170f834e793c32ed9aa9665b5dcf5013e6bc60b2dda8c9cd",
+    "reference_results/apc/behalf_comparator.json": "fb11869469c67171109ada444e834126cce2fb61051223be8c2e660336be44eb",
+    "reference_results/apc/case_study_check.json": "fb7b12e144844f1ed1473ccec5e1e61dbce507c9df85771f91db6a083c4277b7",
+    "reference_results/apc/diagnostics.json": "ca6a06336a53f07adc9edb877476c1990fb6ce7013c2c8312dbd0719e58f1a65",
+    "reference_results/apc/graph_contract_campaign.json": "4cef96be8c0cd903103c984cdfbcc8c3c62f4a3634e9f78bf95bcdc0537e1628",
+    "reference_results/apc/mandatekit_comparator.json": "ccf70359ea71daaef251d9eb19a948ba22e053eea94f271f57685a5fe667000d",
+    "reference_results/apc/mandatekit_tree_comparator.json": "0b090ef2a250d97e0d5432bad01599dd243a75d2c9bbb4e44209b471dbd28c27",
+    "reference_results/apc/patch_validation.json": "9751e1708028df2a0bfe750ec390f830661011e0ea1b18301ff7098b1ae5e2e4",
+    "reproduce.py": "859579ce846bc45a83f44e25f276b048bd1582b15754a9186d4857d8419eae3d",
+    "src/apc_case_study_check.py": "28bedc334440d26719df5d9d204666048e556f13d037e7885bae2ed2c9fd905a",
+    "src/apc_depth_ablation.py": "365933bfe200576de8ad632e982e4737aad5bdbcdfbae29354af664b975fb7e4",
+    "src/apc_issuer_repair_demo.py": "484d7c5c45632fc4539848c17bfe5b7b7af1a84b8571d33c6c0ebfc023a95f37",
+    "src/apc_k_tuple_ablation.py": "dfffabfbd7a8bd93caecdb92a5d479cd137e763de056b01a0752d3bc1ef3d344",
+    "src/apc_patch_validation.py": "9e374e28b08dd79241e30f05c48c9e0dac82284ff1e612c8426319d39c9f9ff2",
+    "src/apc_persistence_poc.py": "dd8235827467cc78b4e12724ee4cc38d4b2e0c5b0b43b1bba44f28be76514fd2",
+    "src/apc_restriction_binding_poc.py": "a54d775881752dbe4e97c32c6b5f9d97ee5b7bdc9c815274c6dafed3c66d89eb",
+    "src/apc_revocation_poc.py": "32c52fcc5ce866e5502144b85b590cc89321220fedb4cb1d0ba2e3e3ec1b455e",
+    "src/behalf_comparator.py": "d871ae9b7f014fda283cccdb348cdb1ebef7f7795ecee108f64ebd90b2c8028c",
+    "src/graph_contract_campaign.py": "8d487964d3f0453679377c8658d3ecce1267964b5281e5f0d402e9cce46ed666",
+    "src/mandatekit_comparator.py": "0a458747705706973790253e7193a2990c16da3b08b08feda9431407dbc38366",
+    "src/mandatekit_tree_comparator.py": "6313e4c511a9e23c1825c6df837c477c03af42f3ebf422b93d90ffb07620ac18",
+    "src/mechanism_conformance.py": "c312232d650c300d78ef368e6ddb8016e94a818b04574605b97078002d66a2dd",
+    "src/run_apc_audit.py": "74a3693ddc7c3c6b0e7c423fe85614c5673338e6f678d8fb4bf8f1324f67ff09",
+    "submission/make_project_image.py": "8631bd8d9d425f1a35995857c0824636f408677a74a8ec4db9b7e717e7cab9cb",
+    "submission/project-image.png": "5c82ebdfdca72893208f18e4fbbfb5b6831af91be9899b98570bd194d04b357a"
+  },
+  "sanitization": "Recursive normalization of local paths and executable locations; no private keys or signed credential objects are part of result snapshots.",
+  "reproducer_external_writes": false
+}

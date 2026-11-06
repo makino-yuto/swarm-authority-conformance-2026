@@ -1,0 +1,730 @@
+{
+  "repository": "https://github.com/major-matters/mandatekit",
+  "commit": "fc6a3745ef3eab5ee1e8842f275a5666cf9ffc4f",
+  "sdk_version": "0.2.1",
+  "crypto_backend": "pure-python",
+  "width": 3,
+  "depth": 3,
+  "total_envelopes": 40,
+  "unique_ids_total": 40,
+  "id_generation": "Unchanged build_mandate/delegate_mandate UUID defaults; caller supplied no mandate_id.",
+  "fixed_now": "2026-11-06T00:00:00+00:00",
+  "revocation_list_count": 14,
+  "revoked_target": {
+    "path": "r.0.0.0",
+    "mandate_id": "2a13f0f1-8403-4572-b78f-637942ab2727",
+    "issuer_list_id": "synthetic-issuer-list/r.0.0"
+  },
+  "per_level": [
+    {
+      "level": 0,
+      "envelopes": 1,
+      "unique_ids": 1,
+      "baseline_admitted": 1,
+      "denied_after_one_leaf_revocation": 0
+    },
+    {
+      "level": 1,
+      "envelopes": 3,
+      "unique_ids": 3,
+      "baseline_admitted": 3,
+      "denied_after_one_leaf_revocation": 0
+    },
+    {
+      "level": 2,
+      "envelopes": 9,
+      "unique_ids": 9,
+      "baseline_admitted": 9,
+      "denied_after_one_leaf_revocation": 0
+    },
+    {
+      "level": 3,
+      "envelopes": 27,
+      "unique_ids": 27,
+      "baseline_admitted": 27,
+      "denied_after_one_leaf_revocation": 1
+    }
+  ],
+  "before_revocation": [
+    {
+      "path": "r",
+      "level": 0,
+      "mandate_id": "261506cd-3829-43c1-b6ee-b153982d2ff6",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0",
+      "level": 1,
+      "mandate_id": "5864e2fa-9762-4d2e-905b-815ade3e65a2",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1",
+      "level": 1,
+      "mandate_id": "41865646-4863-4fb6-a443-3d3c251918ee",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2",
+      "level": 1,
+      "mandate_id": "e2da20ac-72c9-4d9e-b907-c92668ec8a5c",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.0",
+      "level": 2,
+      "mandate_id": "b079cf28-05da-41c3-86fe-fe4ddb7e0747",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1",
+      "level": 2,
+      "mandate_id": "80871e5f-cd6a-47af-96b0-0d8542ab0033",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2",
+      "level": 2,
+      "mandate_id": "60ea53a9-f326-469d-91e9-a66368da1c52",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0",
+      "level": 2,
+      "mandate_id": "812f19f3-7b35-4d0c-a90b-1664f412ff24",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1",
+      "level": 2,
+      "mandate_id": "4816dcec-53ac-47fc-9376-08616931bb89",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2",
+      "level": 2,
+      "mandate_id": "176840fc-2b39-4c84-b0fc-1b274661ccfc",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0",
+      "level": 2,
+      "mandate_id": "b0fce5c5-9519-435b-afc0-3ed211034490",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1",
+      "level": 2,
+      "mandate_id": "701d92e7-b1ca-47bc-9e05-598f9cf43e57",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2",
+      "level": 2,
+      "mandate_id": "97e01a58-b136-4de0-b3b7-66b463d7511d",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.0.0",
+      "level": 3,
+      "mandate_id": "2a13f0f1-8403-4572-b78f-637942ab2727",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.0.1",
+      "level": 3,
+      "mandate_id": "92e5f98e-70ec-4f96-a6e0-dbd18d308743",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.0.2",
+      "level": 3,
+      "mandate_id": "5807dbab-39b7-4cad-b2b0-3981d402c086",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1.0",
+      "level": 3,
+      "mandate_id": "4f5b319e-bf61-4de2-aa6f-d95b1d750590",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1.1",
+      "level": 3,
+      "mandate_id": "0df2ff04-6188-41a0-be65-14794f9e1f26",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1.2",
+      "level": 3,
+      "mandate_id": "d489048c-f1a1-41f2-961d-fa990ccaa800",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2.0",
+      "level": 3,
+      "mandate_id": "a405ce83-7351-4ad1-b865-09d45f62da28",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2.1",
+      "level": 3,
+      "mandate_id": "35d06c13-9acc-4e6c-8950-7c74b5ae8442",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2.2",
+      "level": 3,
+      "mandate_id": "6c7607b8-e503-45ac-b204-8fe4371a99b6",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0.0",
+      "level": 3,
+      "mandate_id": "63b6b267-1a8a-480c-93b8-f98a22b1c647",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0.1",
+      "level": 3,
+      "mandate_id": "79e3435c-d5e9-425f-9813-f267139cd054",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0.2",
+      "level": 3,
+      "mandate_id": "adc42891-797d-49c9-b905-268a03b45cae",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1.0",
+      "level": 3,
+      "mandate_id": "8e3a204e-3bd3-41a0-b742-9d624b328bc6",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1.1",
+      "level": 3,
+      "mandate_id": "9baa0b02-4d0d-42b2-8de5-7f0f454432eb",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1.2",
+      "level": 3,
+      "mandate_id": "93a53a3f-22f4-4fa0-a850-8e385ee8484d",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2.0",
+      "level": 3,
+      "mandate_id": "b47bae92-1187-4473-a506-4e6eed87d7ce",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2.1",
+      "level": 3,
+      "mandate_id": "2c2db409-6630-4416-8bbe-ad17ec02ea72",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2.2",
+      "level": 3,
+      "mandate_id": "3f1f0704-01c7-4c70-8ae4-1a1f009acf28",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0.0",
+      "level": 3,
+      "mandate_id": "bbc1af8d-3cf5-4d92-8c1b-39531a644402",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0.1",
+      "level": 3,
+      "mandate_id": "22e51f5a-22a9-48d4-99af-76354242c44c",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0.2",
+      "level": 3,
+      "mandate_id": "41b247cc-bbe6-4643-8220-dadbfa536506",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1.0",
+      "level": 3,
+      "mandate_id": "068b3901-fb9b-4521-810f-d81516bcf030",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1.1",
+      "level": 3,
+      "mandate_id": "ce4081be-cad1-4d8c-9dd3-6747f911298b",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1.2",
+      "level": 3,
+      "mandate_id": "1cce5aa7-b09d-4fe6-82a5-2e055d6bca05",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2.0",
+      "level": 3,
+      "mandate_id": "3611e7f7-99f5-4d49-a148-8c5d8ad1e881",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2.1",
+      "level": 3,
+      "mandate_id": "2bb7088f-859e-4c4f-9979-bb4163693c99",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2.2",
+      "level": 3,
+      "mandate_id": "f21c201f-6ff6-4d08-b60e-53692f99939f",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    }
+  ],
+  "after_one_leaf_revocation": [
+    {
+      "path": "r",
+      "level": 0,
+      "mandate_id": "261506cd-3829-43c1-b6ee-b153982d2ff6",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0",
+      "level": 1,
+      "mandate_id": "5864e2fa-9762-4d2e-905b-815ade3e65a2",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1",
+      "level": 1,
+      "mandate_id": "41865646-4863-4fb6-a443-3d3c251918ee",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2",
+      "level": 1,
+      "mandate_id": "e2da20ac-72c9-4d9e-b907-c92668ec8a5c",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.0",
+      "level": 2,
+      "mandate_id": "b079cf28-05da-41c3-86fe-fe4ddb7e0747",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1",
+      "level": 2,
+      "mandate_id": "80871e5f-cd6a-47af-96b0-0d8542ab0033",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2",
+      "level": 2,
+      "mandate_id": "60ea53a9-f326-469d-91e9-a66368da1c52",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0",
+      "level": 2,
+      "mandate_id": "812f19f3-7b35-4d0c-a90b-1664f412ff24",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1",
+      "level": 2,
+      "mandate_id": "4816dcec-53ac-47fc-9376-08616931bb89",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2",
+      "level": 2,
+      "mandate_id": "176840fc-2b39-4c84-b0fc-1b274661ccfc",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0",
+      "level": 2,
+      "mandate_id": "b0fce5c5-9519-435b-afc0-3ed211034490",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1",
+      "level": 2,
+      "mandate_id": "701d92e7-b1ca-47bc-9e05-598f9cf43e57",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2",
+      "level": 2,
+      "mandate_id": "97e01a58-b136-4de0-b3b7-66b463d7511d",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.0.0",
+      "level": 3,
+      "mandate_id": "2a13f0f1-8403-4572-b78f-637942ab2727",
+      "decision": "deny",
+      "signature_valid": true,
+      "failed": [
+        {
+          "constraint": "revoked",
+          "passed": false,
+          "detail": "mandate 2a13f0f1-8403-4572-b78f-637942ab2727 is revoked in list 'synthetic-issuer-list/r.0.0'"
+        }
+      ]
+    },
+    {
+      "path": "r.0.0.1",
+      "level": 3,
+      "mandate_id": "92e5f98e-70ec-4f96-a6e0-dbd18d308743",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.0.2",
+      "level": 3,
+      "mandate_id": "5807dbab-39b7-4cad-b2b0-3981d402c086",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1.0",
+      "level": 3,
+      "mandate_id": "4f5b319e-bf61-4de2-aa6f-d95b1d750590",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1.1",
+      "level": 3,
+      "mandate_id": "0df2ff04-6188-41a0-be65-14794f9e1f26",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.1.2",
+      "level": 3,
+      "mandate_id": "d489048c-f1a1-41f2-961d-fa990ccaa800",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2.0",
+      "level": 3,
+      "mandate_id": "a405ce83-7351-4ad1-b865-09d45f62da28",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2.1",
+      "level": 3,
+      "mandate_id": "35d06c13-9acc-4e6c-8950-7c74b5ae8442",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.0.2.2",
+      "level": 3,
+      "mandate_id": "6c7607b8-e503-45ac-b204-8fe4371a99b6",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0.0",
+      "level": 3,
+      "mandate_id": "63b6b267-1a8a-480c-93b8-f98a22b1c647",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0.1",
+      "level": 3,
+      "mandate_id": "79e3435c-d5e9-425f-9813-f267139cd054",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.0.2",
+      "level": 3,
+      "mandate_id": "adc42891-797d-49c9-b905-268a03b45cae",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1.0",
+      "level": 3,
+      "mandate_id": "8e3a204e-3bd3-41a0-b742-9d624b328bc6",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1.1",
+      "level": 3,
+      "mandate_id": "9baa0b02-4d0d-42b2-8de5-7f0f454432eb",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.1.2",
+      "level": 3,
+      "mandate_id": "93a53a3f-22f4-4fa0-a850-8e385ee8484d",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2.0",
+      "level": 3,
+      "mandate_id": "b47bae92-1187-4473-a506-4e6eed87d7ce",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2.1",
+      "level": 3,
+      "mandate_id": "2c2db409-6630-4416-8bbe-ad17ec02ea72",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.1.2.2",
+      "level": 3,
+      "mandate_id": "3f1f0704-01c7-4c70-8ae4-1a1f009acf28",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0.0",
+      "level": 3,
+      "mandate_id": "bbc1af8d-3cf5-4d92-8c1b-39531a644402",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0.1",
+      "level": 3,
+      "mandate_id": "22e51f5a-22a9-48d4-99af-76354242c44c",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.0.2",
+      "level": 3,
+      "mandate_id": "41b247cc-bbe6-4643-8220-dadbfa536506",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1.0",
+      "level": 3,
+      "mandate_id": "068b3901-fb9b-4521-810f-d81516bcf030",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1.1",
+      "level": 3,
+      "mandate_id": "ce4081be-cad1-4d8c-9dd3-6747f911298b",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.1.2",
+      "level": 3,
+      "mandate_id": "1cce5aa7-b09d-4fe6-82a5-2e055d6bca05",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2.0",
+      "level": 3,
+      "mandate_id": "3611e7f7-99f5-4d49-a148-8c5d8ad1e881",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2.1",
+      "level": 3,
+      "mandate_id": "2bb7088f-859e-4c4f-9979-bb4163693c99",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    },
+    {
+      "path": "r.2.2.2",
+      "level": 3,
+      "mandate_id": "f21c201f-6ff6-4d08-b60e-53692f99939f",
+      "decision": "allow",
+      "signature_valid": true,
+      "failed": []
+    }
+  ],
+  "checks": {
+    "expected_tree_node_count": true,
+    "all_ids_unique": true,
+    "all_raw_node_signatures_valid": true,
+    "all_revocation_list_signatures_valid": true,
+    "all_baseline_admitted": true,
+    "only_target_leaf_denied": true,
+    "target_denial_is_revocation": true,
+    "all_unrelated_nodes_still_admitted": true,
+    "all_output_signature_flags_remain_valid": true
+  },
+  "all_checks_pass": true,
+  "source_sha256": {
+    "python/mandatekit/mandate.py": "1e3e5adf9cac83a31e301612a07e01cf7e3946621e43b895ec860a45f4bf4272",
+    "python/mandatekit/verifier.py": "285675a8681e493c9c6a75c3a234ec696e478adf6d9815edd3bea635afd47dc7",
+    "python/mandatekit/signing.py": "80efcf0b9d88345075ad256379a1cdba75d72dfbcd55e15933c6362be30fb3dd"
+  },
+  "source_locations": {
+    "sdk_default_uuid": "python/mandatekit/mandate.py:326 and :395",
+    "remaining_depth_validation": "python/mandatekit/verifier.py:607-613",
+    "revocation_list_signer_check": "python/mandatekit/verifier.py:402-407",
+    "exact_mandate_id_revocation_match": "python/mandatekit/verifier.py:418-422",
+    "revocation_checks_each_chain_link": "python/mandatekit/verifier.py:937-942"
+  },
+  "scope_limits": [
+    "Local synthetic signed-grant verification only; no real agent behavior or transactions are measured.",
+    "Revocation lists are complete, fresh, issuer-signed snapshots supplied by this fixture. Distribution, rollback, stale-list replay, multi-process synchronization and production operation are not evaluated.",
+    "This matches the APC leaf-local isolation question, where the selected node has no descendants; ancestor-cascade semantics are not compared.",
+    "The SDK uses a remaining-depth value at every signed link; this is not APC session-state accounting.",
+    "Mandate IDs are random UUIDs generated by unchanged SDK APIs. Exact ID bytes change on re-run; verdict invariants and counts are expected to remain the same.",
+    "Experimental unaudited v0 SDK using its pure-Python crypto fallback in this environment; not a production-security endorsement."
+  ]
+}

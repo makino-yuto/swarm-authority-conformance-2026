@@ -1,0 +1,42 @@
+[
+  {
+    "name": "APC depth overflow named variant",
+    "claimed_mechanism": "actual envelope depth exceeds signed maximum",
+    "confound": "irreversible-effects budget exhausted",
+    "blocked": [
+      [
+        false,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "published_confound_present": true,
+    "isolated_effect": 0,
+    "published_comparison_effect": 0,
+    "confound_alone_effect": 1,
+    "interpretation": "claimed mechanism has no blocking effect in the isolated probe; confound blocks"
+  },
+  {
+    "name": "APC k-tuple bypass named variant",
+    "claimed_mechanism": "ordered k-tuple rule enabled",
+    "confound": "pairwise read-to-external-send rule enabled",
+    "blocked": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "published_confound_present": true,
+    "isolated_effect": 1,
+    "published_comparison_effect": 0,
+    "confound_alone_effect": 1,
+    "interpretation": "mechanism blocks when isolated, but published comparison is masked by confound"
+  }
+]

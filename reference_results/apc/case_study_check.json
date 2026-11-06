@@ -1,0 +1,65 @@
+{
+  "upstream_repository": "https://github.com/xmuruaga/bounded-agents",
+  "commit": "d31a1ea115a3e97ab972ac8d03f23ef36cf9b653",
+  "upstream_fixture": "tests/test_case_studies.py:TestCaseStudyII.setup_method",
+  "grant_ids": {
+    "planner": "cs2-env:1:2",
+    "reviewer": "cs2-env:1:2",
+    "deployer": "cs2-env:1:2"
+  },
+  "signatures_valid": {
+    "planner": true,
+    "reviewer": true,
+    "deployer": true
+  },
+  "baseline": {
+    "planner": {
+      "admitted": true,
+      "denial_reasons": [],
+      "identity_binding_passed": true
+    },
+    "reviewer": {
+      "admitted": true,
+      "denial_reasons": [],
+      "identity_binding_passed": true
+    },
+    "deployer": {
+      "admitted": true,
+      "denial_reasons": [],
+      "identity_binding_passed": true
+    }
+  },
+  "after_one_planner_id_revocation": {
+    "planner": {
+      "admitted": false,
+      "denial_reasons": [
+        "envelope 'cs2-env:1:2' has been revoked"
+      ],
+      "identity_binding_passed": null
+    },
+    "reviewer": {
+      "admitted": false,
+      "denial_reasons": [
+        "envelope 'cs2-env:1:2' has been revoked"
+      ],
+      "identity_binding_passed": null
+    },
+    "deployer": {
+      "admitted": false,
+      "denial_reasons": [
+        "envelope 'cs2-env:1:2' has been revoked"
+      ],
+      "identity_binding_passed": null
+    }
+  },
+  "checks": {
+    "three_roles_have_distinct_principals": true,
+    "three_roles_share_one_id": true,
+    "all_three_signatures_valid": true,
+    "all_three_legitimate_actions_admitted_before": true,
+    "all_three_denied_after_planner_id_revoked": true,
+    "denials_are_revocation_specific": true
+  },
+  "all_checks_pass": true,
+  "scope": "Local fixture and low-impact test actions only; no deployed DevOps system or real agent behavior."
+}
